@@ -12,10 +12,18 @@
 			{% block title %}Welcome!
 			{% endblock %}
 		</title>
-
-
 	</head>
-	<body>
-		{% block body %}{% endblock %}
+	<body class="d-flex flex-column">
+		<header>header</header>
+		<div class="flex-fill d-flex flex-row-nowrap">
+			<div class="content d-flex flex-row-nowrap">
+				<div class="sidebar">sidebar</div>
+				<div class="flex-fill">
+					{% block body %}HELLO
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		<footer>footer</footer>
 	</body>
 </html>

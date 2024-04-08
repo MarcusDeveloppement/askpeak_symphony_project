@@ -15,6 +15,7 @@
   --color-dark: #352f1a;
   --gray: #575650;
   --gray-dark: #393835;
+  --max-width: 1200px;
 }
 
 /* reset */
@@ -41,6 +42,21 @@ h3,
 h4,
 h5 {
   color: var(--color-dark);
+}
+
+/* debug */
+
+.b1 {
+  background-color: red;
+}
+.b2 {
+  background-color: blue;
+}
+.b3 {
+  background-color: rgb(210, 210, 20);
+}
+.b4 {
+  background-color: orange;
 }
 
 /* flex */
@@ -108,4 +124,16 @@ h5 {
 
 .p-20 {
   padding: 20px;
+}
+
+/* general */
+
+.content {
+  max-width: var(--max-width);
+}
+
+/* sidebar */
+
+.sidebar {
+  min-width: 200px;
 }
