@@ -3,19 +3,21 @@
 :root {
   --primary: #ffde59;
   --primary-light: #ffea94;
-  --accent: #7248ea;
+  --accent: #e767b2;
   --warning: #eb4d4b;
   --success: #6ab04c;
   --font-family: "Open Sans", sans-serif;
   --box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
     0 1px 3px 1px rgb(60 64 67 / 15%);
-  --border-radius: 3px;
+  --border-radius: 5px;
   --border: 1 solid #ddd;
   --color-text: #464029;
   --color-dark: #352f1a;
   --gray: #575650;
+  --gray-light: #ecf0f1;
   --gray-dark: #393835;
   --max-width: 1200px;
+  --footer-background: #7632b7;
 }
 
 /* reset */
@@ -112,6 +114,14 @@ h5 {
   margin: 20px;
 }
 
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mr-50 {
+  margin-right: 50px;
+}
+
 /* padding */
 
 .p-5 {
@@ -126,14 +136,110 @@ h5 {
   padding: 20px;
 }
 
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /* general */
 
 .content {
   max-width: var(--max-width);
 }
 
+.btn {
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  opacity: 0.7;
+  transition: opacity 0.4s;
+}
+
+.btn-small {
+  padding: 5px 15px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.btn-primary-stroke {
+  border: 1px solid var(--primary);
+  color: var(--accent);
+  background-color: white;
+}
+
 /* sidebar */
 
 .sidebar {
   min-width: 200px;
+}
+
+/* header */
+header {
+  box-shadow: var(--box-shadow);
+}
+
+.header-search {
+  border-radius: var(--border-radius);
+  background-color: var(--gray-light);
+  max-width: 400px;
+}
+
+.header-search input {
+  border: 0;
+  outline: 0;
+  background-color: var(--gray-light);
+  width: 94%;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.header-logo img {
+  max-width: 100px;
+  border-radius: 100px;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--gray-light);
+}
+
+/* sidebar */
+
+.sidebar-nav li {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: var(--font-size-small);
+}
+
+.sidebar-nav li:hover {
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+.sidebar-nav li i {
+  color: var(--color-dark);
+}
+
+.active {
+  border-left: 5px solid var(--primary);
+  background-color: var(--primary-light);
 }
