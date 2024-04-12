@@ -24,4 +24,23 @@ class QuestionController extends AbstractController
             'form' => $formQuestion->createView(),
         ]);
     }
+    #[Route('/question/{id}', name: 'question_show')]
+    public function show(Request $request, string $id): Response
+    {
+
+        $question = [
+            'title' => 'je suis une question',
+            'content' => 'lorem ipsum dolor sit amet est un pelvir etam',
+            'rating' => 20,
+            'author' => [
+                'name' => 'Jean Dupont',
+                'avatar' => 'https://randomuser.me/api/portraits/men/78.jpg'
+            ],
+            'nbrOfResponse' => 15
+        ];
+
+        return $this->render('question/show.html.twig', [
+            'question' => $question
+        ]);
+    }
 }
