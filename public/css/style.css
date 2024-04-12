@@ -1,7 +1,7 @@
 /* theme */
 
 :root {
-  --primary: #ffde59;
+  --primary: #ebc632;
   --primary-light: #ffea94;
   --accent: #e767b2;
   --warning: #eb4d4b;
@@ -71,6 +71,11 @@ a {
   background-color: orange;
 }
 
+small {
+  font-size: var(--font-size-small);
+  font-family: var(--font-family);
+}
+
 /* flex */
 
 .d-flex {
@@ -124,6 +129,10 @@ a {
   margin: 20px;
 }
 
+.mr-10 {
+  margin-right: 10px;
+}
+
 .mr-20 {
   margin-right: 20px;
 }
@@ -148,6 +157,10 @@ a {
 
 .p-20 {
   padding: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
 }
 
 .py-20 {
@@ -206,6 +219,12 @@ a {
   box-shadow: var(--box-shadow);
 }
 
+.block-shadow:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.4s;
+}
+
 .form-row {
   display: flex;
   flex-flow: column;
@@ -237,6 +256,20 @@ textarea {
   font-weight: var(--font-weight-semi-bold);
 }
 
+.avatar {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.clickable {
+  color: var(--primary);
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+}
 /* sidebar */
 
 .sidebar {
@@ -299,4 +332,17 @@ footer {
 .active {
   border-left: 5px solid var(--primary);
   background-color: var(--primary-light);
+}
+
+/* questions  */
+.question-content {
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.rating-up {
+  color: var(--primary);
+}
+
+.rating-down {
+  color: var(--warning);
 }
